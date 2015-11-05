@@ -45,6 +45,13 @@ if ($el('org_count')) {
     xhr.send();
 }
 
+var nav = document.querySelector('nav');
+if (nav) {
+    new ShareBarController({
+        el: nav
+    });
+}
+
 
 
 })(document, window);
