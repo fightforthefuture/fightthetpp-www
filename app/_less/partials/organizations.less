@@ -1,0 +1,54 @@
+#org_list {
+    text-align: center;
+    padding-bottom: 5rem;
+
+    ul.tabs {
+
+        margin: 0px auto 0 auto;
+        padding: 0px 0px 2.5rem 0px;
+        width: 100%;
+        max-width: @max-content-width;
+
+        li {
+            display: inline-block;
+            height: 40px;
+            border: 1px solid @text-color;
+            border-radius: 5px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: @text-color;
+            background: @off-white;
+            cursor: pointer;
+            padding: 0px 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 5px;
+            transition: background-color .1s linear;
+
+            &:hover {
+                background: darken(@off-white, 10%);
+            }
+
+            &.sel {
+                border: 1px solid @link-color;
+                background: @link-color;
+                color: white;
+            }
+
+        }
+    }
+
+    .hint {
+        background: #f1fbfa;
+        width: 100%;
+        max-width: @max-content-width;
+        margin: 0px auto;
+        padding: 10px;
+        color: fade(@text-color, 80%);
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    ul.list {
+    }
+}

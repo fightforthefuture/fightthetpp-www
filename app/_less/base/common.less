@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: @body-font;
+    position: relative;
+    background: @off-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @heading-font;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+
+    @media screen and (min-width: @large-tablet) {
+        font-size: 8rem;
+        line-height: 8.4rem;
+    }
+
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    @media screen and (min-width: @large-tablet) {
+        font-size: 4rem;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
