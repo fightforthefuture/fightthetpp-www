@@ -3,7 +3,7 @@ div.action {
     background: #3b958b;
     padding: 1rem 0px 3rem 0px;
     text-align: center;
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, .5);
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, .3);
     z-index: 2;
 
     h2 {
@@ -29,7 +29,7 @@ div.action {
         background: white;
         height: 50px;
         line-height: 50px;
-        font-size: 2rem;
+        font-size: 1.8rem;
         width: 150px;
         margin: 4px 4px;
         padding: 0px 10px;
@@ -57,6 +57,13 @@ div.action {
         &:hover {
             background: darken(@link-color, 10%);
         }
+    }
+
+    .thanks {
+        display: none;
+        font-size: 2rem;
+        padding: 2rem 15px 1rem 15px;
+        color: white;
     }
 }
 .disclosure {
