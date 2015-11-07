@@ -2,7 +2,7 @@ var OrgListView = function (data) {
     var
         frag = document.createDocumentFragment(),
         ul = $c('ul'),
-        ul2 = $c('ul'),
+        orgs = $c('div'),
         li1 = $c('li'),
         hint = $c('div'),
         line1 = $c('span'),
@@ -25,15 +25,15 @@ var OrgListView = function (data) {
     frag.appendChild(ul);
 
     hint.className = 'hint';
-    line1.textContent = 'Click any of the issue areas to see which organizations are standing against the TPP and why.';
+    line1.textContent = 'Click any of the issue areas to see which organizations are standing against the TPP and why. ';
     line2.textContent = 'Or, click an individual logo to see why that organization opposes the TPP.';
     hint.appendChild(line1);
     hint.appendChild(br);
     hint.appendChild(line2);
     frag.appendChild(hint);
 
-    ul2.className = 'orgs';
-    frag.appendChild(ul2);
+    orgs.className = 'orgs';
+    frag.appendChild(orgs);
 
     return frag;
 };

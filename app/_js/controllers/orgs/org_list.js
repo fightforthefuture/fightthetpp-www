@@ -1,6 +1,6 @@
 var OrgListController = Composer.Controller.extend({
     elements: {
-        'ul.list': 'list'
+        'div.orgs': 'orgs'
     },
 
     events: {
@@ -12,20 +12,19 @@ var OrgListController = Composer.Controller.extend({
     init: function() {
         this.render();
 
-        /*
         new Composer.ListController({
             collection: this.collection,
-            inject: this.list,
+            tag: 'ul',
+            inject: this.orgs,
             init: function() {
                 this.track(this.collection, function(model, options) {
-                    return new PoliticianController({
+                    return new OrgController({
                         inject: this.el,
                         model: model
                     });
                 }.bind(this), {bind_reset: true})
             }
         });
-        */
     },
 
     render: function() {

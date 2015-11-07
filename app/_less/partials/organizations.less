@@ -1,6 +1,5 @@
 #org_list {
     text-align: center;
-    padding-bottom: 5rem;
 
     ul.tabs {
 
@@ -11,19 +10,25 @@
 
         li {
             display: inline-block;
-            height: 40px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 1.1rem;
             border: 1px solid @text-color;
             border-radius: 5px;
-            line-height: 40px;
             text-transform: uppercase;
             color: @text-color;
             background: @off-white;
             cursor: pointer;
             padding: 0px 15px;
-            font-size: 1.6rem;
             font-weight: 600;
             margin: 5px;
             transition: background-color .1s linear;
+
+            @media screen and (min-width: @large-phone) {
+                height: 40px;
+                line-height: 40px;
+                font-size: 1.6rem;
+            }
 
             &:hover {
                 background: darken(@off-white, 10%);
@@ -47,8 +52,80 @@
         color: fade(@text-color, 80%);
         font-size: 1.4rem;
         line-height: 2.4rem;
+
+        br {
+            display: none;
+        }
     }
 
-    ul.list {
+    div.orgs {
+        ul {
+            padding-top: 2rem;
+            li {
+                vertical-align: top;
+                display: inline-block;
+                border-radius: 5px;
+                background: white;
+                margin: 4px;
+                border-right: 1px solid #cacdcd;
+                border-left: 1px solid #cacdcd;
+                width: 137px;
+                height: 45px;
+                line-height: 40px;
+                padding: 5px;
+                cursor: pointer;
+                transition: transform .2s, box-shadow .2s;
+
+                &:hover {
+                    transform: scale(1.10);
+                    box-shadow: 0px 2px 10px rgba(0, 0, 0, .1);
+                    border-right: 1px solid #aaa;
+                    border-left: 1px solid #aaa;
+                }
+
+
+                @media screen and (min-width: @large-phone) {
+                    margin: 6px;
+                    width: 215px;
+                    height: 70px;
+                    line-height: 60px;
+                    padding: 10px;
+                }
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                    opacity: 0;
+                    transition: opacity 1s;
+
+                    &.visible {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.overlay .gutter .modal.org {
+    h2 {
+        margin-bottom: 1rem;
+    }
+    img.org_image {
+        display: block;
+        max-width: 250px;
+        height: auto;
+        margin: 0px auto 2rem auto;
+
+        @media screen and (min-width: @large-phone) {
+            max-width: 400px;
+        }
+    }
+    div.org_shares {
+        margin: 2rem auto 1rem auto;
+    }
+    a.org_link {
+        font-size: 2rem;
     }
 }

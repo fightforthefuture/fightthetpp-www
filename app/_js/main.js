@@ -26,7 +26,7 @@ var spawnPetition = function(i) {
 }
 spawnPetition(1);
 
-if ($el('org_count')) {
+if ($el('org-count')) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
