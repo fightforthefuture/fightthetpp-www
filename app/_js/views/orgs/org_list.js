@@ -7,18 +7,20 @@ var OrgListView = function (data) {
         hint = $c('div'),
         line1 = $c('span'),
         br = $c('br'),
-        line2 = $c('span');
+        line2 = $c('span'),
+        add = $c('div'),
+        addBlurb = $c('span'),
+        addLink = $c('a');
 
     ul.className = 'tabs'
     li1.textContent = 'All';
     li1.className = 'sel';
     ul.appendChild(li1);
 
-    console.log('categories: ', data.categories);
-
     for (var i=0; i < data.categories.length; i++) {
         var li = $c('li');
         li.textContent = data.categories[i].name;
+        li.id = '_org_cat_' + data.categories[i].id;
         ul.appendChild(li);
     }
 
@@ -34,6 +36,16 @@ var OrgListView = function (data) {
 
     orgs.className = 'orgs';
     frag.appendChild(orgs);
+
+    add.className = 'add';
+    addBlurb.textContent = 'Want to add your group to this list? ';
+    add.appendChild(addBlurb);
+
+    addLink.textContent = 'Click here.';
+    addLink.href = '#';
+    add.appendChild(addLink);
+
+    frag.appendChild(add);
 
     return frag;
 };

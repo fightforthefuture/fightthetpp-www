@@ -13,6 +13,8 @@ var OrgController = Composer.Controller.extend({
     init: function() {
         this.render();
         this.loadImage();
+
+        this.with_bind(this.model, 'fade', this.fadeOut.bind(this));
     },
 
     render: function() {
@@ -34,5 +36,9 @@ var OrgController = Composer.Controller.extend({
         new OrgModalController({
             model: this.model
         });
+    },
+
+    fadeOut: function(e) {
+        this.img.classList.remove('visible');
     }
 });
