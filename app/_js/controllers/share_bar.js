@@ -35,5 +35,8 @@ var ShareBarController = Composer.Controller.extend({
 
     scrollToTop: function() {
         util.scrollToTop(500);
+        setTimeout(function() {
+            window.location.hash = '';
+        }, 500);
     }
 });

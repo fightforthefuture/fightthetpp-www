@@ -63,7 +63,7 @@ var OrgSignupView = function(data) {
     statementHint.className = 'hint';
     form.appendChild(statementHint);
 
-    statement.name = 'statement';
+    statement.name = 'biography';
     form.appendChild(statement);
 
     linkLabel.textContent = 'URL for more info';

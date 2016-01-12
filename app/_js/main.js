@@ -1,4 +1,6 @@
 var ORG_API_BASE_URL = 'https://fightthetpp-api.herokuapp.com';
+//var ORG_API_BASE_URL = 'http://metacube:9000';
+
 
 (function (doc, win) {
     "use strict";
@@ -65,6 +67,18 @@ if (nav) {
 if (util.getParameterByName('idl'))
     new IDLThanksModalController();
 
-
+var hashChange = function () {
+    if (window.location.hash == '#signup')
+        new OrgSignupController();
+    else if (window.location.hash != '#' && window.location.hash != '')
+        if (document.getElementById(window.location.hash.substr(1)))
+            setTimeout(function() {
+                var doc = document.documentElement;
+                var top = (window.pageYOffset || doc.scrollTop)-(doc.clientTop || 0);
+                scrollTo(0, top-40);
+            }, 10);
+}
+window.onhashchange = hashChange;
+hashChange();
 
 })(document, window);

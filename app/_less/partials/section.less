@@ -1,7 +1,7 @@
 section {
 
     /* background: white; */
-    padding: 4rem 15px 5rem 15px;
+    padding: 4rem 15px 4rem 15px;
     text-align: center;
 
     h2 {
@@ -20,10 +20,34 @@ section {
     &.off-white {
         /* background: transparent; */
     }
+    &.white {
+        background: white;
+    }
 
     ul {
+        margin: 0px auto;
+
         li {
             padding: .5rem 0rem;
+            font-size: 2rem;
+            line-height: 2.7rem;
+            text-align: left;
         }
+
+        &.bulleted {
+            max-width: @list-width;
+            list-style-type: disc;
+
+            li {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    p {
+        margin: 0px auto 3rem auto;
+        max-width: @max-content-width;
+        font-size: 2rem;
+        line-height: 2.7rem;
     }
 }

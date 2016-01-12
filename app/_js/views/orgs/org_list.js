@@ -42,7 +42,7 @@ var OrgListView = function (data) {
     add.appendChild(addBlurb);
 
     addLink.textContent = 'Click here.';
-    addLink.href = '#';
+    addLink.href = '#signup';
     add.appendChild(addLink);
 
     frag.appendChild(add);
