@@ -12,7 +12,7 @@ var spawnPetition = function(i) {
         new EmailPetitionController({
             el: '#petition'+i,
             disclosureEl: '#disclosure'+i,
-            page_id: 'choosethefuture',
+            page_id: 'fightthetpp',
             required: ['email', 'zip', 'first_name', 'address1'],
             buttonText: 'Take Action',
             orgs: {
