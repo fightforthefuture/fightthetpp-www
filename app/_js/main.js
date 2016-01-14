@@ -12,6 +12,7 @@ var spawnPetition = function(i) {
         new EmailPetitionController({
             el: '#petition'+i,
             disclosureEl: '#disclosure'+i,
+            subject: 'Please vote NO on the TPP',
             page_id: 'fightthetpp',
             required: ['email', 'zip', 'first_name', 'address1'],
             buttonText: 'Take Action',
