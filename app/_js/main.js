@@ -68,6 +68,9 @@ if (nav) {
 if (util.getParameterByName('idl'))
     new IDLThanksModalController();
 
+if (util.getParameterByName('showOrgs'))      // JL HACK ~ remove when orgs live
+    $el('JL-HACK').style.display = 'block';   // JL HACK ~ remove when orgs live
+
 var hashChange = function () {
     if (window.location.hash == '#signup')
         new OrgSignupController();
