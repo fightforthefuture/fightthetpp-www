@@ -13,9 +13,6 @@ description: The TPP is a threat to everything you care about. Take action to st
 timezone: America/Los_Angeles # Should be formatted like formal tz database
 googleanalytics: UA-26576645-31
 
-favicon: '' # replace this with path to favicon if that’s a thing you’re doing.
-pathlead: '' # use this if you need a leading slash or directory on asset paths
-
 author:
     googleid: 102356128596404327231
     twitterid: 382376904
