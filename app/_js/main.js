@@ -24,7 +24,7 @@ var spawnPetition = function(i) {
                 $el('thanks'+i).style.display = 'block';
                 new CallModalController({
                     headline:   'Can you call Congress to #FightTheTPP?',
-                    campaign:   'stop-tpp',
+                    campaign:   'stop-tpp-2',
                     cta:        'Congress needs to understand that the TPP is a dirty deal for the 1%. Enter your phone number and we\'ll call and connect you to Congress.',
                     callScript: 'Please vote against the TPP trade deal, and do not allow Congress to push this through during the lame duck session. I\'m watching this issue closely and hope you\'ll make the right decision.',
                     shareText:  'We\'re up against some of the most powerful corporate lobbyists in the country, but that hasn\'t stopped us before. If a critical mass of citizens speak out against the TPP, our voices will be impossible to ignore.',
